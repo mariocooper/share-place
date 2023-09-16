@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Avatar from "../../shared/components/UIElements/Avatar";
 import Card from "../../shared/components/UIElements/Card";
-import './UserItem.css'
+import "./UserItem.css";
 
 const UserItem = props => {
   return (
