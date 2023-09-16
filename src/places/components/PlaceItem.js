@@ -27,6 +27,10 @@ const PlaceItem = props => {
     >
       <div className="map-container">
         <h2>THE MAP GOES HERE</h2>
+        <p>
+          Cannot render a map here at this current time.
+          This feature will be added once the Google Maps API requirements can be met.
+        </p>
       </div>
     </Modal>
     <li className="place-item">
