@@ -1,10 +1,10 @@
 import React from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import PlaceList from "../components/PlaceList";
 
-const UserPlaces = () => {
-  const DUMMY_PLACES = [
-    {
-      id: "p1",
+const DUMMY_PLACES = [
+  {
+    id: "p1",
       title: "Empire State Building",
       description: "The world's most magnificent Art Deco skyscraper",
       imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/NYC_Empire_State_Building.jpg/640px-NYC_Empire_State_Building.jpg",
@@ -29,8 +29,11 @@ const UserPlaces = () => {
     }
   ];
 
+const UserPlaces = () => {
+  const userId = useParams().userId;
+  const loadedPlaces = DUMMY_PLACES.filter(place => place.creator === userId);
   return (
-    <PlaceList items={DUMMY_PLACES} />
+    <PlaceList items={loadedPlaces} />
   );
 };
 
